@@ -1,0 +1,42 @@
+### recuperar todas las peliculas
+GET http://localhost:1234/movies 
+
+
+### recuperar una pelicula por su id
+GET http://localhost:1234/movies/C13AC27F75DF11EF9DAC90E868F84D04
+
+### Recuperar todas las peliculas por su genero
+GET http://localhost:1234/movies?genre=Drama
+
+
+### crear una pelicula con POST 
+
+POST http://localhost:1234/movies 
+Content-Type : application/json
+
+
+{
+    "title":"Jesus",
+    "year": 1996,
+    "director": "Frank Darabont",
+    "duration": 142,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": ["Drama"],
+    "rate": 7.8   
+}
+### DELETE
+
+DELETE http://localhost:1234/movies/80e4cd0c-ecd8-45be-a160-6483e9eaa7bc
+
+
+### Actializar un id
+PATCH http://localhost:1234/movies/488eff68-149b-4d33-bf60-1575a645435f
+Content-Type : application/json
+
+{
+    "title": "The Godfather: Part II",
+    "year": 2020
+
+}
+
+
